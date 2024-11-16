@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f9fafb;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 6px rgba(51, 48, 48, 0.1);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-blue-600 shadow-md">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-white">My Portfolio</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#about" class="text-white hover:text-gray-900">About</a></li>
+                    <li><a href="#skills" class="text-white hover:text-gray-900">Skills</a></li>
+                    <li><a href="#projects" class="text-white hover:text-gray-900">Projects</a></li>
+                    <li><a href="#contact" class="text-white hover:text-gray-900">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="relative mb-8">
+                <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture mx-auto">
+                <label for="profile-upload" class="absolute bottom-0 right-0 bg-whte text-white px-2 py-1 rounded-full cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.536L16.732 5.232zm.792-2.792a3.5 3.5 0 00-4.95 0h-1.757c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3 1.343 3 3 3z"></path>
+                    </svg>
+                </label>
+                <input type="file" id="profile-upload" class="hidden" accept="image/*">
+            </div>
+            <h2 class="text-3xl font-bold mb-2">John kim</h2>
+            <p class="text-gray-700 mb-4">Web Developer & Designer</p>
+            <p class="text-gray-600">Passionate about creating beautiful and functional websites.</p>
+            
+            <a href="https://www.linkedin.com/in/jin-marx-uk-developer-company-8a2b04338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-blue-500 hover:text-blue-700">View LinkedIn Profile</a>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/jin-marx-uk-developer-company-8a2b04338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" alt="LinkedIn QR Code" class="qr-code">
+        </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">HTML/CSS</h3>
+                    <p class="text-gray-700">Expert in building responsive and modern web designs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">JavaScript</h3>
+                    <p class="text-gray-700">Proficient in creating interactive and dynamic web applications.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">React</h3>
+                    <p class="text-gray-700">Experience with building single-page applications using React.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Node.js</h3>
+                    <p class="text-gray-700">Skilled in server-side development and building RESTful APIs.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Tailwind CSS</h3>
+                    <p class="text-gray-700">Expert in using Tailwind CSS for rapid UI development.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Git</h3>
+                    <p class="text-gray-700">Proficient in version control and collaboration using Git.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4">Uploaded Project Video</h3>
+                <input type="file" id="project-video-upload" class="border rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline" accept="video/*">
+            </div>
+            <div id="project-videos" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sample Video -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">E-commerce Website</h3>
+                    <p class="text-gray-700 mb-4">A fully functional e-commerce platform built with React and Node.js.</p>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="https://www.w3schools.com/howto/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                    <p class="text-gray-700 mb-4">A personal portfolio website showcasing my projects and skills.</p>
+                    <div class="video-container">
+                        <video controls>
+                            <source src="https://www.w3schools.com/howto/mov_bbb.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <!-- Uploaded Video will be appended here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact</h2>
+            <div class="max-w-lg mx-auto">
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                        <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                        <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                        <textarea id="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-40"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button class="bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-gray-900">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 John kim. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('profile-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profile-picture').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('project-video-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'bg-white p-6 rounded-lg shadow-md';
+                    videoContainer.innerHTML = `
+                        <h3 class="text-xl font-bold mb-2">${file.name}</h3>
+                        <p class="text-gray-700 mb-4">Uploaded project video.</p>
+                        <div class="video-container">
+                            <video controls>
+                                <source src="${e.target.result}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `;
+                    document.getElementById('project-videos').appendChild(videoContainer);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
